@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 7915168983876795863}
-  resolution: {fileID: 0}
+  resolution: {fileID: 2058584785}
   levels: {fileID: 1630258987}
   log: {fileID: 1626863162}
 --- !u!114 &722251871 stripped
