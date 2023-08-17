@@ -114,13 +114,13 @@ public class GameManager : NetworkBehaviour
     {
         try
         {
-            currentLobby = await LobbyService.Instance.CreateLobbyAsync("NewLobby", 6);
+            currentLobby = await LobbyService.Instance.CreateLobbyAsync("NewLobby", 6); //number of players
 
             Debug.Log("Created Lobby");
 
             StartCoroutine(HandleLobbyHeartbeat());
 
-            Allocation hostAllocation = await RelayService.Instance.CreateAllocationAsync(4);
+            Allocation hostAllocation = await RelayService.Instance.CreateAllocationAsync(5); //number of non-host connections
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(hostAllocation, "dtls"));
 
             NetworkManager.Singleton.StartHost();
